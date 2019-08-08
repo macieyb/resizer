@@ -1,44 +1,3 @@
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--<head>-->
-<!--    <title>Image Rescale</title>-->
-<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"-->
-<!--          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
-<!--</head>-->
-<!--<body>-->
-<!--<div class="container">-->
-<!--    <label for="rescale-form" class="col-sm-2 col-form-label">Rescale Image Form</label>-->
-<!--    <form action="form.php" method="post" class="md-form" id="rescale-form">-->
-<!--        <div class="input-group mb-3">-->
-<!--            <div class="input-group-prepend">-->
-<!--                <span class="input-group-text" id="input-width">Target width of image (px):</span>-->
-<!--            </div>-->
-<!--            <input name="width" type="number" class="form-control" placeholder="Width">-->
-<!--        </div>-->
-<!--        <div class="input-group mb-3">-->
-<!--            <div class="input-group-prepend">-->
-<!--                <span class="input-group-text" id="input-height">Target height of image (px):</span>-->
-<!--            </div>-->
-<!--            <input name="height" type="number" class="form-control" placeholder="Height">-->
-<!--        </div>-->
-<!--        <div class="input-group mb-3">-->
-<!--            <div class="input-group-prepend">-->
-<!--                <span class="input-group-text" id="input-file">Select file to upload:</span>-->
-<!--            </div>-->
-<!--            <div class="custom-file">-->
-<!--                <input name="file" type="file" class="custom-file-input" id="input-file-upload">-->
-<!--                <label class="custom-file-label" for="input-file-upload">Image</label>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--      Image Rescale  <div class="row justify-content-center">-->
-<!--            <div class="col-md-6">-->
-<!--                <input type="submit" name="submit" class="btn btn-primary btn-block">Submit</input>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </form>-->
-<!--</div>-->
-<!--</body>-->
-<!--</html>-->
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
@@ -72,10 +31,6 @@
     <div class="row">
         <div class="col"></div>
         <?php
-
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        error_reporting(E_ALL);
 
         require __DIR__ . '/vendor/autoload.php';
 
