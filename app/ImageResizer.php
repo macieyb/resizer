@@ -64,11 +64,6 @@ class ImageResizer
     {
         $date = new DateTime('NOW');
         $logger = new Logger('resize_history');
-
-//        if (!file_exists('logs')) {
-//            mkdir('logs', 0777, true);
-//        }
-
         $logger->pushHandler(new StreamHandler('logs/resize_history.log', Logger::INFO));
         $logger->addInfo('Resizing new image',
             [
