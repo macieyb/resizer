@@ -5,6 +5,7 @@ namespace Resizer;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use DateTime;
+use Exception;
 
 class ImageResizer
 {
@@ -13,10 +14,14 @@ class ImageResizer
     public function __construct()
     {
         if (!file_exists('logs')) {
-            mkdir('logs', 0777, true);
+            if (!mkdir('logs', 0777, true)) {
+                throw new Exception("Cannot create logs directory, check your file permissions on resizer app dir.");
+            };
         }
         if (!file_exists('upload')) {
-            mkdir('upload', 0777, true);
+            if (!mkdir('upload', 0777, true)) {
+                throw new Exception("Cannot create logs directory, check your file permissions on resizer app dir.");
+            };
         }
     }
 

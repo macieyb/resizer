@@ -37,7 +37,12 @@
         use Resizer\ImageResizer;
 
         if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['submit']) && is_array($_FILES["file"])) {
-            $imageResizer = new ImageResizer();
+
+            try {
+                $imageResizer = new ImageResizer();
+            } catch (Exception $e) {
+                echo ("Exception thrown: " . $e->getMessage());
+            }
             $resizedImage = $imageResizer->getResizedImage($_FILES['file'], $_POST);
 
             echo "<div class='col-md-auto'>";
