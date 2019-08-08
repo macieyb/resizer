@@ -1,0 +1,9 @@
+{
+  "require": {
+    "monolog/monolog": "*",
+    "ext-gd": "*"
+  },
+  "autoload": {
+    "psr-4": {"Resizer\\": "app/"}
+  }
+}
